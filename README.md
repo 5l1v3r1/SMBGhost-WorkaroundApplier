@@ -1,5 +1,5 @@
   
-<h2>SMBGhost Workarounds Scanner for CVE-2020-0796 - SMBv3 unauthenticated RCE</h2>
+<h2>SMBGhost Workaround Applier for CVE-2020-0796 - SMBv3 unauthenticated RCE</h2>
 
 <p>This scanner has the ability to detect and apply the workaround in case your system is not patched yet.
 The Scanner is looking for the vulrability in your system only.
