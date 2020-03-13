@@ -1,5 +1,5 @@
 # Date 03/12/2020 - March
-# CVE-2020-0796 (SMBGhost,CoronaBlue) Workaround Applier - Created by Ahmad Almorabea @almorabea
+# CVE-2020-0796 (SMBGhost,CoronaBlue) Workaround Scanner - Created by Ahmad Almorabea @almorabea
 # Description: SMBv3 "SMB 3.1.1" has an unauthenticated RCE vulnerability and it's critical - Remember WannaCry/Petya/NotPetya ?!
 
 from winreg import *
@@ -8,6 +8,11 @@ from ctypes import *
 
 print("Your system information as follows")
 print(platform.uname())
+
+if "Windows-7" in platform.platform() or "Windows-8" in platform.platform():
+    exit("Your System is not Vulnerable to SMBv3 ")
+
+
 Registry = ConnectRegistry(None, HKEY_LOCAL_MACHINE)
 path = "SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters"
 RawKey = OpenKey(Registry, path)
